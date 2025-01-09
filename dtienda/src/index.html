@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dgala | Tienda de vestidos </title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Dgala - Marca líder en vestidos de fiesta.">
+    <meta name="keywords" content="business, services, e-commerce, shopping cart, shop, marketing, seo, gallery, creative, vestidos, moda, fiesta, gala, ropa">
+    <meta name="author" content="Dgala">
+    <meta property="og:title" content="Compra lo mejores vestidos de fiesta en nuestra tienda online">
+    <meta property="og:description" content="Encuentra ropa de moda, a precios increíbles. Calidad garantizada. ¡Compra hoy mismo!">
+    <meta property="og:image" content="https://Dgala.com/angela1.jpg">
+    <meta property="og:url" content="https://Dgala.com">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imggala/snf2.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imggala/snf2.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imggala/snf2.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="assets/imggala/snf2.png">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/recursos/vendor/tiny-slider/dist/tiny-slider.css" />
+
+    <!-- Main Theme Styles + Bootstrap-->
+
+    <link rel="stylesheet" media="screen" href="assets/recursos/css/demo/ecommerce/theme.min.css">
+
+
+    <!--<link rel="stylesheet" href="nivo/nivo-slider.css" type="text/css" media="screen" />-->
+    <!--<link rel="stylesheet" href="nivo/style.css" type="text/css" media="screen" />-->
+    <script src="https://kit.fontawesome.com/e4cee8a12a.js" crossorigin="anonymous"></script>
+    <!-- movimiento baner-->
+
+    <!-- Page loading styles-->
+    <style>
+        .pagination {
+            margin-bottom: 0px;
+        }
+        
+        .cs-page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        
+        .cs-page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .cs-page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .cs-page-loading.active>.cs-page-loading-inner {
+            opacity: 1;
+        }
+        
+        .cs-page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #787a80;
+        }
+        
+        .cs-page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            background-color: #cfcfd1;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+        
+        @keyframes spinner {
+            0% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.cs-page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+
+
+    <!-- contador-->
+    <style>
+        .numeros {
+            font-family: 'Lobster', cursive;
+            font-size: 18px;
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background-color: #646464;
+            padding: 7px;
+            border-radius: 3px;
+            animation: slideIn 2s ease-in-out;
+            display: inline-block;
+            box-shadow: 8px 15px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <style>
+        .colrss {
+            color: #ffffff;
+            background-color: #8d4934;
+            /* Cambia el color aquí */
+            /* O la fuente que prefieras */
+        }
+    </style>
+
+
+    <!-- tranformacion 4 imagenes -->
+    <style>
+        .animadoss {
+            transition: transform 0.3s;
+        }
+        
+        .animadoss:hover {
+            transform: scale(1.1);
+            /* Aumenta el tamaño del elemento */
+        }
+    </style>
+
+
+    <!-- imagenes baner-->
+    <style>
+        .banner-box {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            /* Ajusta según tu diseño */
+            height: 400px;
+            /* Oculta cualquier parte de la imagen que se amplíe fuera del contenedor */
+        }
+        
+        .banner-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Sustituye esto con la URL de tu imagen */
+            background-size: cover;
+            /* La imagen se ajustará sin recortarse */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            background-position: center;
+            transition: transform 0.4s ease-in-out;
+            z-index: -1;
+            /* Coloca la imagen detrás del contenido */
+        }
+        /* Especifica las diferentes imágenes de fondo para cada div */
+        
+        .banner-box-1::before {
+            background-image: url('imggala/cmujer.jpeg');
+        }
+        
+        .banner-box-2::before {
+            background-image: url('imggala/cmujer3.jpeg');
+        }
+        
+        .banner-box-3::before {
+            background-image: url('imggala/cmujer2.jpeg');
+        }
+        
+        .banner-box-4::before {
+            background-image: url('imggala/cmujer4.avif');
+        }
+        
+        .banner-box:hover::before {
+            transform: scale(1.1);
+            /* Ajusta el valor para controlar el zoom */
+        }
+        /* Ajusta el padding y el margen según sea necesario */
+    </style>
+
+
+
+    <!-- texto y imagen de fondo de productos-->
+    <style>
+        .txt1 {
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            font-size: 55px;
+            font-style: italic;
+        }
+        
+        .txt2 {
+            color: #353535;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+        
+        .txt3 {
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+        }
+        
+        .txt4 {
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+        }
+        
+        .txt5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .ele {
+            background: url('imggala/in1.jpg') no-repeat center/cover fixed padding-box content-box;
+            position: relative;
+            /* Ajusta según tus necesidades */
+            color: #000;
+            /* Texto negro */
+        }
+        
+        .ele::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgb(238, 233, 230, 0.702);
+            /* Fondo blanco semitransparente */
+            z-index: 1;
+        }
+        
+        .ele>* {
+            position: relative;
+            z-index: 2;
+            /* Asegura que el texto esté por encima del pseudo-elemento */
+        }
+    </style>
+
+
+    <!-- iconos redes socials -->
+
+    <style>
+        .r1 :hover {
+            color: rgba(0, 38, 255, 0.815);
+            /* Cambia a rojo cuando pasas el mouse */
+        }
+        
+        .r2 i {
+            -webkit-background-clip: text;
+            color: white;
+        }
+        /* Opcional: Aplica un efecto de brillo o cambio al pasar el mouse */
+        
+        .r2:hover i {
+            background: linear-gradient(45deg, #bc1888, #cc2366, #dc2743, #e6683c, #f09433);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        .r3 :hover {
+            color: rgb(0, 0, 0);
+            /* Cambia a rojo cuando pasas el mouse */
+        }
+        
+        .r4 :hover {
+            color: rgb(0, 0, 0);
+            /* Cambia a rojo cuando pasas el mouse */
+        }
+        
+        .r5 :hover {
+            color: rgb(0, 0, 0);
+            /* Cambia a rojo cuando pasas el mouse */
+        }
+        
+        .r6 :hover {
+            color: red;
+            /* Cambia a rojo cuando pasas el mouse */
+        }
+    </style>
+
+
+    <style>
+        .slide-in {
+            transform: translateX(-100%);
+            opacity: 0;
+            transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+        }
+        /* Estado final cuando se carga la página */
+        
+        .slide-in-visible {
+            transform: translateX(0%);
+            /* Ajusta este valor para cambiar la posición final */
+            opacity: 1;
+        }
+    </style>
+
+    <!-- carrusel productos-->
+    <style>
+        .carousel-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 150px;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.50s ease-in-out;
+            margin-right: 3.5%;
+            gap: 20px;
+            /* Ajusta el tamaño del margen según sea necesario */
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Cuatro columnas por defecto */
+            gap: 50px;
+            /* Espacio entre columnas */
+            margin-right: 0.5%;
+            /* Margen derecho para separar las hojas */
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            /* Oculta el desbordamiento para que el zoom no afecte el contenedor */
+            position: relative;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+        
+        .image-container img.zoomed {
+            transform: scale(1.1);
+            /* Agranda la imagen un 10% */
+        }
+        
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        
+        .carousel-control.prev {
+            left: 10px;
+        }
+        
+        .carousel-control.next {
+            right: 10px;
+        }
+        
+        .carousel-control:hover {
+            background-color: rgba(182, 41, 41, 0.7);
+        }
+        /* Media Queries */
+        
+        @media (max-width: 1100px) {
+            .carousel-slide {
+                grid-template-columns: repeat(3, 1fr);
+                margin-right: 10px;
+                /* Ajusta el margen para resoluciones más pequeñas */
+            }
+        }
+        
+        @media (max-width: 836px) {
+            .carousel-slide {
+                grid-template-columns: repeat(2, 1fr);
+                margin-right: 1px;
+                /* Ajusta el margen para resoluciones aún más pequeñas */
+            }
+        }
+        
+        @media (max-width: 580px) {
+            .carousel-slide {
+                grid-template-columns: repeat(1, 1fr);
+                margin-right: 5px;
+                /* Ajusta el margen para pantallas pequeñas */
+            }
+        }
+    </style>
+
+
+    <!-- contenedor numeros con animacion -->
+
+    <style>
+        .containt {
+            display: grid;
+            grid-template-columns: 1fr 10px 1fr;
+            grid-template-rows: 1fr 10px 1fr;
+            height: auto;
+            width: 100%;
+            max-width: 430px;
+            margin: auto;
+            font-family: "Space Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+            overflow: hidden;
+        }
+        
+        .horizontal-line {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            height: 5px;
+            width: calc(100% + 80px);
+            /* Extiende el ancho de la línea */
+            margin-left: -10px;
+            background-color: #9e9e9e;
+        }
+        
+        .vertical-line {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4;
+            width: 5px;
+            height: 100%;
+            /* Ocupa el 100% de la altura disponible */
+            background-color: #9e9e9e;
+        }
+        
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 30px;
+        }
+        
+        .number-container {
+            position: relative;
+            margin-left: 60px;
+        }
+        
+        .number {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .plus::after,
+        .percent::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.6em;
+            margin-left: 5px;
+        }
+        
+        .plus::after {
+            content: '+';
+        }
+        
+        .percent::after {
+            content: '%';
+        }
+        
+        .icon {
+            position: absolute;
+            left: -40px;
+            top: 15%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: url('icono.png') no-repeat center center / contain;
+            z-index: 1;
+        }
+        
+        .shape-L {
+            position: absolute;
+            left: -50px;
+            top: 15px;
+            width: 80px;
+            height: 80px;
+            border-left: 4px solid #dd9f2b;
+            border-bottom: 4px solid #dd9f2b;
+            z-index: 0;
+        }
+        
+        .label {
+            font-size: 1.2em;
+            margin-top: -10px;
+        }
+        /* Media query para pantallas más pequeñas */
+        
+        @media (max-width: 400px) {
+            .horizontal-line {
+                width: calc(100% + 30px);
+                margin-left: -15px;
+            }
+            .vertical-line {
+                height: 80%;
+                /* Asegura que no se recorte la línea en pantallas pequeñas */
+            }
+            .number {
+                font-size: 2em;
+                /* Reduce aún más el tamaño de la fuente */
+            }
+            .box {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .shape-L {
+                width: 40px;
+                /* Reducir tamaño para móviles */
+                height: 40px;
+            }
+            .icon {
+                width: 20px;
+                /* Hacer más pequeño para pantallas pequeñas */
+                height: 20px;
+            }
+            .label {
+                font-size: 0.8em;
+                /* Reducir tamaño de texto */
+            }
+        }
+    </style>
+
+    <style>
+        .borde-grueso {
+            color: white;
+            -webkit-text-stroke: 1.8px black;
+            /* Borde con text-stroke */
+            text-shadow: 2px 2px 5px rgb(0, 0, 0);
+            /* Sombra en los 4 lados */
+        }
+        
+        .borde-delgad {
+            color: white;
+            text-shadow: -1.5px -1.5px 0 black, 1.5px -1.5px 0 black, -1.5px 1.5px 0 black, 1.5px 1.5px 0 black;
+            /* Borde grueso */
+        }
+    </style>
+
+    <!-- elemtos videos -->
+    <style>
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+        .d-flex {
+            display: flex;
+        }
+        
+        .align-items-center {
+            align-items: center;
+        }
+        
+        .justify-content-center {
+            justify-content: center;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* Ajusta el tamaño mínimo */
+            grid-gap: 30px;
+        }
+        
+        .video-container {
+            background-color: whitesmoke;
+            padding: 10%;
+            min-height: 200px;
+            /* Ajusta este valor según lo necesites */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+        <div class="cs-page-loading-inner">
+            <div class="cs-page-spinner"></div><span>Cargando...</span>
+        </div>
+    </div>
+
+    <main class="cs-page-wrapper">
+        <app-root></app-root>
+    </main>
+
+
+    <!-- Back to top button-->
+    <a class="btn-scroll-top " href="#top" data-scroll data-fixed-element>
+        <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2 ">Top</span>
+        <i class="btn-scroll-top-icon cxi-angle-up "></i>
+    </a>
+
+    <!-- Vendor scripts: js libraries and plugins-->
+    <script src="assets/recursos/vendor/jquery/dist/jquery.slim.min.js "></script>
+    <script src="assets/recursos/vendor/bootstrap/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/recursos/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js "></script>
+    <script src="assets/recursos/vendor/tiny-slider/dist/min/tiny-slider.js "></script>
+
+    <!-- Main theme script-->
+    <script src="assets/recursos/js/theme.min.js "></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var carousel = document.querySelector('.cs-carousel-inner');
+
+            var carouselOptions = JSON.parse(carousel.getAttribute('data-carousel-options'));
+
+            var autoplayDelay = 6000; // Tiempo en milisegundos entre cada desplazamiento
+            var autoplayInterval;
+
+            function startAutoplay() {
+                autoplayInterval = setInterval(function() {
+                    // Aquí puedes agregar la lógica para desplazar el carrusel automáticamente
+                    // Por ejemplo, puedes simular un clic en el botón de siguiente para avanzar los elementos
+                    // carousel.querySelector('.next-button').click();
+                }, autoplayDelay);
+            }
+
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+
+            if (carouselOptions.autoplay && carouselOptions.autoplay.delay) {
+                autoplayDelay = carouselOptions.autoplay.delay;
+
+                if (!carouselOptions.autoplay.disableOnInteraction) {
+                    startAutoplay();
+                }
+
+                carousel.addEventListener('mouseenter', stopAutoplay);
+                carousel.addEventListener('mouseleave', startAutoplay);
+            }
+        });
+    </script>
+</body>
+
+</html>

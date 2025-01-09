@@ -56,4 +56,19 @@ if(!decodedToken){
   return allowRoles.includes(decodedToken['role']);
 
 }
+
+  // Simulación: guarda el usuario en el localStorage (puedes usar tu propia lógica de sesión)
+  guardarUsuario(user: any): void {
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+
+  obtenerUsuario(): any {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  }
+
+  logout(): void {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+  }
 }

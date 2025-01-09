@@ -5,20 +5,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Starter</title>
-
+    <base href="/">
     <!-- Google Font: Source Sans Pro -->
     <link rel="icon" type="image/png" sizes="16x16" href="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="assets/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="assets/adminlte/plugins/fontawesome-free/css/all.min.css">
+    <script src="https://kit.fontawesome.com/19db496910.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/adminlte/plugins/toastr/toastr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap4.css" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.bootstrap4.css" />
+
+    <!-- Tempus Dominus Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/css/tempus-dominus.min.css" crossorigin="anonymous">
+
+
+
     <!-- Theme style -->
     <link rel="stylesheet" href="assets/adminlte/dist/css/adminlte.min.css">
 
+
+
+    <style>
+        .dt-left {
+            text-align: left !important;
+        }
+    </style>
+
+    <style>
+        /* Contenedor del logo - Estado expandido */
+        /* Mostrar contenedor expandido */
+        
+        .logo-container-expanded {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid #4b545c;
+            margin-bottom: 0;
+            /* Asegura que no haya espacio adicional */
+            padding-bottom: 5px;
+            /* Opcional: espacio interno adicional */
+            /* Línea divisora */
+            transition: height 0.3s ease;
+        }
+        /* Ocultar contenedor contraído */
+        
+        .logo-container-expanded.collapsed-state {
+            display: none;
+        }
+        /* Mostrar contenedor contraído */
+        
+        .logo-container-collapsed {
+            display: none;
+            /* Ocultar por defecto */
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: height 0.3s ease;
+        }
+        
+        .logo-container-collapsed.collapsed-state {
+            display: flex;
+        }
+    </style>
+
 </head>
-
-
 
 <body class="hold-transition sidebar-mini">
 
@@ -29,26 +86,8 @@
         </div>
         <!-- Navbar -->
 
-        <!-- /.navbar -->
-
-        <!-- Main Sidebar Container -->
-
-
-        <!-- Content Wrapper. Contains page content -->
-
         <app-root> </app-root>
         <!-- Content Header (Page header) -->
-
-
-
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-            <div class="p-3">
-                <h5>Title</h5>
-                <p>Sidebar content</p>
-            </div>
-        </aside>
-
 
 
     </div>
@@ -58,9 +97,43 @@
     <script src="assets/adminlte/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="assets/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/adminlte/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <!-- InputMask -->
+    <script src="assets/adminlte/plugins/moment/moment.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="assets/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="assets/adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
+    <!-- DataTables  & Plugins -->
+
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap4.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.bootstrap4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.colVis.min.js"></script>
+
+
+
+    <!-- Popperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <!-- Tempus Dominus JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/js/tempus-dominus.min.js" crossorigin="anonymous"></script>
+
+    <script src="assets/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+
     <!-- AdminLTE App -->
-    <script src="assets/adminlte/plugins/toastr/toastr.min.js"></script>
+
     <script src="assets/adminlte/dist/js/adminlte.min.js"></script>
+
+
 </body>
 
 </html>

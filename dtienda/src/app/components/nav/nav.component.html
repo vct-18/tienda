@@ -1,0 +1,128 @@
+<!-- Header (Topbar + Navbar) -->
+<header class="cs-header">
+
+    <!-- Dark topbar -->
+    <div class="topbar topbar-dark bg-dark">
+        <div class="container d-flex justify-content-between px-0 px-xl-3">
+            <div class="me-3">
+                <a class="topbar-link d-md-inline-block d-none" href="#">
+              Disponible 24/7 
+              &nbsp;
+                </a>
+
+                <a class="topbar-link" href="">
+                    <i class="cxi-headset me-1 align-middle"></i> (51) 935288598
+                </a>
+
+            </div>
+            <div>
+                <a href="order-tracking.html" class="topbar-link ms-auto me-4  pe-sm-2 text-nowrap">
+                    <i class="ci-map-pin-outline me-1 fs-base align-middle"></i> Siguenos en &nbsp;
+                </a>
+
+
+                <a href="https://www.facebook.com/profile.php?id=61561666408579&mibextid=ZbWKwL" target="_blank" class="social-btn sb-solid sb-light mr-2 " style="color: rgb(255, 255, 255);" onmouseover="this.style.color='blue';" onmouseout="this.style.color='white';">
+                    <i class="fa-brands fa-facebook-f  align-middle "></i>
+                </a>
+
+                <a href="https://www.instagram.com/dgalatienda/" target="_blank" class="social-btn sb-solid sb-light mr-2 r2">
+                    <i class="fa-brands fa-instagram me-1 fs-base align-middle"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@dgalagala?_t=8pBBugwxvL3&_r=1 " target="_blank" class="social-btn sb-solid sb-light mr-2 r3" style="color: rgb(255, 255, 255);" onmouseover="this.style.color='Black';" onmouseout="this.style.color='white';">
+                    <i class="fa-brands fa-tiktok me-1 fs-base align-middle"></i>
+                </a>
+
+                <a href="# " class="social-btn sb-solid sb-light mr-2 r4" style="color: rgb(255, 255, 255);" onmouseover="this.style.color='Black';" onmouseout="this.style.color='white';">
+                    <i class="fa-brands fa-x-twitter me-1 fs-base align-middle"></i>
+                </a>
+
+                <a href="# " class="social-btn sb-solid sb-light mr-2 r5" style="color: rgb(255, 255, 255);" onmouseover="this.style.color='Black';" onmouseout="this.style.color='white';">
+                    <i class="fa-brands fa-threads me-1 fs-base align-middle "></i>
+                </a>
+                <a href="# " class="social-btn sb-solid sb-light mr-2 r6" style="color: rgb(255, 255, 255);" onmouseover="this.style.color='red';" onmouseout="this.style.color='white';">
+                    <i class="fa-brands fa-youtube me-1 fs-base align-middle"></i>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+    <div class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-fixed-element>
+        <div class="container px-0 px-xl-3">
+            <a href="index.html" class="navbar-brand order-lg-1 mr-0 pr-lg-3 mr-lg-4">
+                <img src="assets/imggala/snf1.png" alt="Dgala Logo" width="130">
+            </a>
+            <!-- Search desktop -->
+            <div class="input-group-overlay ml-4 d-lg-block d-none order-lg-3" style="max-width: 21rem;">
+                <input id="searchInputIndex" class="form-control appended-form-control" type="text" placeholder="Buscar productos...">
+                <div class="input-group-append-overlay" style="cursor: pointer;">
+                    <span class="input-group-text" onclick="searchProductInIndex()"><i class="cxi-search lead align-middle"></i></span>
+                </div>
+            </div>
+            <!-- Toolbar -->
+            <div class="d-flex align-items-center order-lg-3">
+                <ul class="nav nav-tools flex-nowrap">
+
+                    <li class="divider-vertical mb-0 d-lg-block d-none"></li>
+                    <li class="nav-item align-self-center mb-0">
+                        <a href="#" class="ns1 nav-tool pr-lg-0" data-toggle="offcanvas" data-target="cart">
+                            <i class="cxi-cart nav-tool-icon"></i>
+                            <span class="ns2 social-btn sb-dark sb-dark mr-2 ">0</span>
+                        </a>
+                    </li>
+                    <li class="divider-vertical mb-0 d-lg-none d-block"></li>
+                    <li class="nav-item mb-0">
+                        <button class="navbar-toggler mt-n1 mr-n3" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
+                                <span
+                                    class="navbar-toggler-icon"></span>
+                            </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Navbar collapse -->
+            <nav class="collapse navbar-collapse order-lg-2" id="navbarCollapse">
+                <!-- Search mobile -->
+                <div class="input-group-overlay form-group mb-0 d-lg-none d-block">
+                    <input id="searchInputIndexMobile" type="text" class="form-control prepended-form-control rounded-0 border-0" placeholder="Buscar productos...">
+                    <div class="input-group-prepend-overlay" style="cursor: pointer;">
+                        <span class="input-group-text" onclick="searchProductInIndexMobile()">
+                                <i
+                                    class="cxi-search font-size-lg align-middle mt-n1"></i>
+                            </span>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link ">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="nosotros.html" class="nav-link ">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="productos.html" class="nav-link ">Vestidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link ">Contactenos</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+<!-- Promo bar -->
+<section class="colrss cs-promo-bar  py-2">
+    <div class=" container d-flex justify-content-center">
+        <div class=" cs-carousel cs-controls-inverse">
+
+        </div>
+    </div>
+</section>

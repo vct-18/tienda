@@ -1,0 +1,161 @@
+<app-sidebar></app-sidebar>
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Registrar</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">DataTables</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <div class="col-md-7">
+
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Nuevo Registro</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form #registroForm="ngForm" (ngSubmit)="registro(registroForm)">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Nombre -->
+                        <div class="form-group col-md-6">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" maxlength="20" (input)="validarTexto($event,nombreField)" required name="nombres" [(ngModel)]="cliente.nombres" #nombreField="ngModel">
+                            <small class="text-danger" *ngIf="nombreField.invalid && (nombreField.touched || nombreField.dirty)">
+                                Este campo es obligatorio y solo debe contener letras.
+                            </small>
+                            <span class="text-success" *ngIf="nombreField.valid ">
+                                ✔
+                              </span>
+                        </div>
+
+                        <!-- Apellido -->
+                        <div class="form-group col-md-6">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" maxlength="20" (input)="validarTexto($event,apellidoField)" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" required name="apellidos" [(ngModel)]="cliente.apellidos" #apellidoField="ngModel">
+                            <small class="text-danger" *ngIf="apellidoField.invalid && (apellidoField.touched || apellidoField.dirty)">
+                                Este campo es obligatorio y solo debe contener letras.
+                              </small>
+                            <span class="text-success" *ngIf="apellidoField.valid">
+                                ✔
+                              </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Correo Electrónico -->
+                        <div class="form-group col-md-6">
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico" maxlength="50" (input)="validarEmail($event, emailField)" required name="email" [(ngModel)]="cliente.email" #emailField="ngModel">
+                            <small class="text-danger" *ngIf="emailField.invalid && (emailField.touched || emailField.dirty)">
+                                Debe ingresar un correo válido (ej: nombre@dominio.com).
+                            </small>
+                            <span class="text-success" *ngIf="emailField.valid ">
+                                ✔
+                              </span>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="form-group col-md-6">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono" maxlength="9" (input)="validarNumeros($event,telefonoField)" pattern="[0-9]{9}" required name="telefono" [(ngModel)]="cliente.telefono" #telefonoField="ngModel">
+                            <small class="text-danger" *ngIf="telefonoField.invalid && (telefonoField.touched || telefonoField.dirty)">
+                    Ingrese un teléfono válido de 9 dígitos.
+                </small>
+                            <span class="text-success" *ngIf="telefonoField.valid ">
+                    ✔
+                  </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Fecha de Nacimiento -->
+                        <div class="form-group col-md-6">
+                            <label for="f_nacimiento">Fecha de Nacimiento</label>
+                            <div class="d-flex gap-2">
+                                <!-- Selector de Día -->
+                                <select class="form-control" [(ngModel)]="cliente.dia" name="dia" (change)="actualizarFechaNacimiento()">
+                                <option value="" disabled >Día</option>
+                                <option *ngFor="let dia of dias" [value]="dia">{{ dia }}</option>
+                              </select>
+
+                                <!-- Selector de Mes -->
+                                <select class="form-control" [(ngModel)]="cliente.mes" name="mes" (change)="actualizarFechaNacimiento()">
+                                <option value="" disabled >Mes</option>
+                                <option *ngFor="let mes of meses; let i = index" [value]="i + 1">
+                                  {{ mes }}
+                                </option>
+                              </select>
+
+                                <!-- Selector de Año -->
+                                <select class="form-control" [(ngModel)]="cliente.anio" name="anio" (change)="actualizarFechaNacimiento()">
+                                <option value="" disabled >Año</option>
+                                <option *ngFor="let anio of anios" [value]="anio">{{ anio }}</option>
+                              </select>
+                            </div>
+
+                            <!-- Mensaje de error -->
+                            <small class="text-danger" *ngIf="!fechaValida && fechaTocada">
+                              Este campo es obligatorio y debe contener una fecha válida.
+                            </small>
+                            <span class="text-success" *ngIf="fechaValida && fechaTocada">
+                            ✔
+                          </span>
+                        </div>
+
+                        <!-- DNI -->
+                        <div class="form-group col-md-6">
+                            <label for="dni">DNI</label>
+                            <input type="text" class="form-control" id="dni" placeholder="Ingrese su número de DNI" maxlength="8" (input)="validarNumeros($event,dniField)" pattern="[0-9]{8}" required name="dni" [(ngModel)]="cliente.dni" #dniField="ngModel">
+                            <small class="text-danger" *ngIf="dniField.invalid && (dniField.touched || dniField.dirty)">
+                    Ingrese un DNI válido de 8 dígitos.
+                </small>
+                            <span class="text-success" *ngIf="dniField.valid ">
+                    ✔
+                  </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Género -->
+                        <div class="form-group col-md-6">
+                            <label for="genero">Género</label>
+                            <select class="form-control" id="genero" required name="genero" [(ngModel)]="cliente.genero" #generoField="ngModel">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                            <small class="text-danger" *ngIf="generoField.invalid && (generoField.touched || generoField.dirty)">
+                            Debe seleccionar un género.
+                        </small>
+                            <span class="text-success" *ngIf="generoField.valid ">
+                            ✔
+                          </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer ">
+                    <button type="submit" class="btn btn-primary mr-3">Registrar</button>
+                    <a class="btn btn-danger" [routerLink]="['/clientes']">Cancelar</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

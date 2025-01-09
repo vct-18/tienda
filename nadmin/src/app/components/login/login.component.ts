@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin.service';
-declare const toastr: any;
+
 
 @Component({
   selector: 'app-login',
@@ -30,42 +30,37 @@ export class LoginComponent implements OnInit{
    
     
   }
+  login(loginForm: any): void {
 
-  login(loginForm:any) {
-    if (loginForm.valid) {
-      console.log('Usuario autenticado:', this.user);
 
-        let data ={
-        email: this.user.email,
-        password:this.user.password
-}
-
-this._adminService.login_admin(data).subscribe({
-
-  next: (response) => {
-    if(response.data == undefined){
-      toastr.warning(response.message, 'error'); 
-
-    }else{
-      this.usuario=response.data;
-      localStorage.setItem('token',response.token);
-      localStorage.setItem('_id',response.data._id); 
-
-      this._router.navigate(['/']);
-
-    }
-    console.log(response);  // Manejo de respuesta
     
-  },
-  error: (error) => {
-    console.log(error);  // Manejo de error
-    toastr.error('Error al autenticar el usuario', 'Error');
+    if (loginForm.valid) {
+      const data = {
+        email: this.user.email,
+        password: this.user.password
+      };
+      
+
+      this._adminService.login_admin(data).subscribe({
+        next: (response) => {
+          if (response.data == undefined) {
+            this.user.loginError = response.message; // Error del servidor
+          } else {
+            this.usuario=response.data;
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('_id', response.data._id);
+            localStorage.setItem('user', JSON.stringify(response.data)); // Guarda todos los datos del usuario
+            this._router.navigate(['/']);
+          }
+          console.log(response);  // Manejo de respuesta
+        },
+        error: () => {
+          this.user.loginError = 'Error al autenticar. Intenta nuevamente.'; // Error general
+        }
+      });
+    } else {
+      this.user.loginError = 'Por favor completa correctamente todos los campos.';
+    }
   }
+}
 
-});
-
-} else {
-toastr.error('Por favor, completa correctamente el formulario.', 'Error');
-}
-}
-}

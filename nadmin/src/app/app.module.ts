@@ -8,27 +8,37 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { routing } from "./app.routing";
 import { InicioComponent } from './components/inicio/inicio.component';
-
-import { LoginComponent } from './components/login/login.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+
+
 import { IndexClienteComponent } from './components/clientes/index-cliente/index-cliente.component';
+import { CreateClienteComponent } from './components/clientes/create-cliente/create-cliente.component';
+import { EditClienteComponent } from './components/clientes/edit-cliente/edit-cliente.component';
+import { RouterModule } from '@angular/router';
+import { CreateProductoComponent } from './components/productos/create-producto/create-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent, 
-    LoginComponent,
     SidebarComponent,
     FooterComponent,
-    IndexClienteComponent
+    LoginComponent,
+    IndexClienteComponent,
+    CreateClienteComponent,
+    EditClienteComponent,
+    CreateProductoComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    routing
+    HttpClientModule,
+    routing,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
